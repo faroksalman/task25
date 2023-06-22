@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<head><style>
+
+span[data-descr] {
+    position: relative;
+    text-decoration: underline;
+    color: #00f;
+    cursor: help;
+  }
+  
+  span[data-descr]:hover::after,
+  span[data-descr]:focus::after {
+    content: attr(data-descr);
+    position: absolute;
+    left: 0;
+    top: 24px;
+    min-width: 200px;
+    border: 1px #aaaaaa solid;
+    border-radius: 10px;
+    background-color: #ffffcc;
+    padding: 12px;
+    color: #000000;
+    font-size: 14px;
+    z-index: 1;
+  }
+  .ribbon {
+  background-color: #5bc8f7;
+}
+
+.ribbon::before {
+  content: "Look at this orange box.";
+  background-color: #ffba10;
+  border-color: black;
+  border-style: dotted;
+}
+  </style></head>
+<body>
+    <p>
+        farok explain psuedo selector
+        <span tabindex="0" data-descr="collection of words and punctuation">
+          text
+        </span>
+        with a few
+        <span tabindex="0" data-descr="small popups that appear when hovering">
+          tooltips</span
+        >.
+      </p>
+
+      <span class="ribbon">Notice where the orange box is.</span>
+
+</body>
+</html>
